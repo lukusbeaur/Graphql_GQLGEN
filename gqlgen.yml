@@ -1,0 +1,24 @@
+# .gqlgen.yml example
+#
+# Refer to https://gqlgen.com/config/
+# for detailed .gqlgen.yml documentation.
+
+schema:
+- schema.graphql
+exec:
+  filename: graph/generated.go
+  package:  graph
+model:
+  filename: models_gen.go
+resolver:
+  filename: api/resolver.go
+  type: Resolver
+models:
+  Jobs:
+    model:  github.com/projects/go-graphql-jobs/models.Job
+  Application:
+    model:  github.com/projects/go-graphql-jobs/models.Application
+  User:
+    model:  github.com/projects/go-graphql-jobs/models.User
+  Timestamp:
+    model:  github.com/projects/go-graphql-jobs/models.Timestamp
